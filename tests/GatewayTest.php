@@ -31,7 +31,7 @@ class GatewayTest extends GatewayTestCase
                 'lastName' => 'Doe',
                 'number' => '424242424242',
                 'expiryMonth' => '03',
-                'expiryYear' => '2020',
+                'expiryYear' => '2030',
                 'cvv' => '123',
             ]),
         ]);
@@ -44,7 +44,7 @@ class GatewayTest extends GatewayTestCase
         $this->assertEquals('John Doe',             $data['cardholderName']);
         $this->assertEquals('123',                  $data['cvn']);
         $this->assertEquals('03',                   $data['expiryDateMonth']);
-        $this->assertEquals('2020',                 $data['expiryDateYear']);
+        $this->assertEquals('2030',                 $data['expiryDateYear']);
     }
 
     public function testPurchaseUsingStringAmount()
