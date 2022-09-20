@@ -5,7 +5,7 @@ namespace Omnipay\WestpacPaywayRest\Message;
 /**
  * @link https://www.payway.com.au/rest-docs/index.html#customers
  */
-class CreateCustomerRequest extends AbstractRequest
+class CreateCardRequest extends AbstractRequest
 {
     public function getData()
     {

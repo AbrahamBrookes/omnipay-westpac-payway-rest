@@ -144,4 +144,16 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest(CreateSingleUseCardTokenRequest::class, $parameters);
     }
+
+    /**
+     * Create a card that can be used for future transactions - this uses the payway customer object, which is 
+     * the payway equivalent of a save card that can be used for future transactions.
+     * 
+     * @param array $parameters
+     * @return \Omnipay\WestpacPaywayRest\Message\CreateCardRequest|\Omnipay\Common\Message\AbstractRequest
+     */
+    public function createCard(array $parameters = array())
+    {
+        return $this->createRequest(CreateCardRequest::class, $parameters);
+    }
 }
